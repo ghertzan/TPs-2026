@@ -1,0 +1,30 @@
+\documentclass[titlepage, 12pt, a4paper, oneside]{article}
+
+% --- Preámbulo y configuración general ---
+\input{preambulo/preambulo}
+
+\begin{document}
+	
+	% --- Portada institucional ---
+	\include{carcasas/portada}
+	
+	% --- Secciones preliminares e índices ---
+	\pagenumbering{roman}
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\clearpage
+	
+	% --- Cuerpo principal del documento ---
+	\pagenumbering{arabic}
+	\pagestyle{fancy}
+	
+	\input{secciones/1_Introduccion}
+		
+	\clearpage
+	
+	% --- Bibliografía (Normas APA) ---
+	\bibliographystyle{apacite}
+	\bibliography{bibliografia/dbBibliografia}
+	
+\end{document} 

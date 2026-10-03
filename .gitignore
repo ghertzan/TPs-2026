@@ -1,0 +1,35 @@
+## Archivos específicos de TeXstudio
+*.bak
+*.sav
+*.txsscript
+.texstudio/
+## Archivos auxiliares principales de LaTeX
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_ Latexmk
+*.synctex.gz
+
+## Archivos temporales de editores (como TeXstudio, Overleaf o VS Code)
+*.bak
+*.sav
+*.tex.bak
+*.pdfsync
+
+## Archivos de caché e índices avanzados
+*.idx
+*.ilg
+*.ind
+*.glo
+*.gls
+*.glg
+
+## OPCIONAL: Descomenta la siguiente línea si NO quieres subir el PDF final
+# *.pdf

@@ -1,0 +1,97 @@
+% ==============================================================================
+% 1. CODIFICACIÓN, IDIOMA Y FUENTES
+% ==============================================================================
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel} % es-tabla usa "Tabla" en vez de "Cuadro"
+\usepackage{csquotes}
+
+% Tipografía base (Times profesional con soporte matemático completo)
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{microtype}                % Ajuste fino de espaciado y justificación
+
+% ==============================================================================
+% 2. GEOMETRÍA Y DISEÑO DE PÁGINA (Normas APA / Universitario)
+% ==============================================================================
+\usepackage[left=2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing                       % Interlineado 1.5 estándar y limpio
+
+% ==============================================================================
+% 3. GRÁFICOS, COLORES Y TABLAS
+% ==============================================================================
+\usepackage{xcolor}
+\definecolor{s21Primary}{RGB}{0, 108, 91}       % Color institucional principal
+\definecolor{s21Secondary}{RGB}{0, 128, 128}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{tablefootnote}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+% ==============================================================================
+% 4. MATEMÁTICAS Y HERRAMIENTAS AUXILIARES
+% ==============================================================================
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{amssymb}
+\usepackage{lipsum}
+
+% ==============================================================================
+% 5. DATOS DEL DOCUMENTO (EDITAR SOLO ESTE BLOQUE EN CADA PROYECTO)
+% ==============================================================================
+\newcommand{\docInstitucion}{Universidad Siglo 21}
+\newcommand{\docMateria}{Materia Aquí}
+\newcommand{\docTitulo}{Título del Trabajo Práctico}
+\newcommand{\docSubtitulo}{Subtítulo o Tema Específico}
+\newcommand{\docAutor}{Gabriel Hertzan}
+\newcommand{\docLegajo}{VINF00000}
+\newcommand{\docDocente}{Docente / Tutor}
+\newcommand{\docVersion}{1.0}
+\newcommand{\docFecha}{\today}
+
+% Variables retrocompatibles con tus archivos anteriores
+\author{\docAutor}
+\title{\docMateria}
+\newcommand{\Version}{\docVersion}
+\newcommand{\titulo}{\docTitulo}
+\newcommand{\tema}{\docSubtitulo}
+
+% ==============================================================================
+% 6. ENCABEZADOS Y PIES DE PÁGINA (fancyhdr)
+% ==============================================================================
+\usepackage{fancyhdr}
+\setlength{\headheight}{26pt}         % Altura suficiente para dos líneas en cabecera
+
+\fancypagestyle{fancy}{
+	\fancyhf{}
+	% Cabecera
+	\lhead{\footnotesize \textbf{\docTitulo} \\ \textit{\textcolor{s21Primary}{\docSubtitulo}}}
+	\rhead{}
+	\renewcommand{\headrulewidth}{0.4pt}
+	
+	% Pie de página
+	\lfoot{\footnotesize Versión: \docVersion \\ \docAutor}
+	\cfoot{\footnotesize \leftmark}
+	\rfoot{\footnotesize Pág. \thepage}
+	\renewcommand{\footrulewidth}{0.4pt}
+}
+
+% ==============================================================================
+% 7. BIBLIOGRAFÍA Y ENLACES (Siempre al final del preámbulo)
+% ==============================================================================
+\usepackage[natbibapa]{apacite}
+\usepackage[hidelinks, pdfencoding=auto]{hyperref}
+
+% Metadatos PDF para visores (Acrobat, navegadores, etc.)
+\hypersetup{
+	pdftitle={\docTitulo},
+	pdfauthor={\docAutor},
+	pdfsubject={\docMateria}
+}
